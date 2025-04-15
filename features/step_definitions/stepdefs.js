@@ -57,7 +57,7 @@ Then('I should see cards displayed in the "Listen Live" rail', async function ()
 })
 
 When('I click the "View all Stations & Schedules" link within the "Listen Live" rail', async function () {
-    await homepage.goToViewAllStations();  // navigating to View ALl Stations 
+    await homepage.goToViewAllStations();  // initiates click on View ALl Stations & Schedule link
 })
 
 Then('I should be redirected to the "ALL_STATIONS" page', async function () {
@@ -77,41 +77,38 @@ Then('the rail should display twelve category links', async function () {
 });
 
 When('I click the "View all Categories" link on the "Categories" rail', async function () {
-    await homepage.goToViewAllCategories(); // View All Categories 
+    await homepage.goToViewAllCategories(); // initiates click on View All Categories link
 });
 
 Then('I should be redirected to the "ALL_CATEGORIES" page', async function () {
     assert.equal(await categories.getBrowseAllMusicHeader().getText(), "Browse all Music"); // asserts that the Music Rail title text is "Browse all Music"
-    assert.equal(await driver.getCurrentUrl(), "https://www.bbc.co.uk/sounds/categories"); //
+    assert.equal(await driver.getCurrentUrl(), "https://www.bbc.co.uk/sounds/categories"); //  asserts that the current url reflects redirtection to "All Categories"
 });
 
 //>> SCENARIO 3 <<
 Then('I should see the "Listen Live" rail', async function () {
-    assert.ok(await homepage.getListenLiveRail().isDisplayed());
-    assert.equal(await homepage.getListenLiveRailTitle().getText(), "Listen Live");
+    assert.ok(await homepage.getListenLiveRail().isDisplayed()); // asserts that the Listen Live Rail is displayed
+    assert.equal(await homepage.getListenLiveRailTitle().getText(), "Listen Live"); //asserts that the Listen Live Rail has corect title text "Listen Live" 
 });
 
 When('I click on "Radio 1" card', async function () {
-    await homepage.goToRadioOne();
-    console.log('clicking Radio One Card');
+    await homepage.goToRadioOne(); // initaites click on Radio One Card
 });
 
 Then('I should be redirected to the "Play" page', async function () {
-    assert.equal(await playpage.getplayHero().getText(), "Radio 1 - Listen Live - BBC Sounds"); 
-    assert.ok(await driver.getCurrentUrl(), "https://www.bbc.co.uk/sounds/play/live/bbc_radio_one");
+    assert.equal(await playpage.getplayHero().getText(), "Radio 1 - Listen Live - BBC Sounds"); // asserts that the Play Hero has corresponding text "Radio 1 - Listen..." 
+    assert.ok(await driver.getCurrentUrl(), "https://www.bbc.co.uk/sounds/play/live/bbc_radio_one"); //asserts that the current url reflects redirtection to "Radio 1 - Listen Live - .."
 });
 
 When('I click the "Play" button', async function () {
-    await playpage.clickPlayButton();
-    console.log('clicking Play btn');
+    await playpage.clickPlayButton(); //initaites click on Play button 
 });
 
 Then('I should see a prompt to "Sign In" or "Register"', async function () {
-    assert.ok(await modal.getModal().isDisplayed());
-    assert.equal(await modal.getModalHeader().getText(), "Sign in to listen"); 
-    assert.ok(await modal.getSignUp().isEnabled());
-    assert.ok(await modal.getRegisterLink().isEnabled());
-    console.log(`modal "Sign In" or "Register"`);
+    assert.ok(await modal.getModal().isDisplayed());  // asserts that the Modal pop up displays  
+    assert.equal(await modal.getModalHeader().getText(), "Sign in to listen");  // asserts that the modal header has title  text  "Sign in to listen"
+    assert.ok(await modal.getSignUp().isEnabled()); // asserts that the Sign up button is enabled
+    assert.ok(await modal.getRegisterLink().isEnabled()); // asserts that the Register up button is enabled
 });
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

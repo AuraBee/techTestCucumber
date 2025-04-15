@@ -28,7 +28,7 @@ Ensure you have the following installed:
 
 ### Installation 
 
-**1 Clone the Repository:**
+**Clone the Repository:**
 
 `git clone https://github.com/AuraBee/techTestCucumber.git`
 
