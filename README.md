@@ -1,14 +1,15 @@
 # BBC Sounds - Technical Test showcasing Cucumber + Selenium + JavaScript for testing.
 
-**Project Overview**
-This repo showcases a technical test project for BBC Sounds website.
-This testing automation framework is built with Node.js, Cucumber, Selenium Webdriver.
-Test Features and scenarios in Gherkin syntax for readability and collaboration.
-Page Object Model implemented to promote code reusability and maintainability
-Tests are structured to support integration into framework and CI/CD pipelines for scalable automation.
+## Project Overview
+
+This repo showcases a technical test project for BBC Sounds website. 
+A testing automation framework built with Node.js, Cucumber, Selenium Webdriver.
+Test Features and Scenarios are witten in Gherkin syntax to assist readability and collaboration. 
+The Page Object Model deisgn pattern promotes code reusability and maintainability
+All tests are structured to support integration into framework and CI/CD pipelines for scalable automation.
 
 
-**Project Structure**
+## Project Structure 
 
 - Feature files written in Gherkin define user behavior and scenarios
 - Step definitions map Gherkin steps to test logic
