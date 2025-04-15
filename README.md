@@ -15,9 +15,9 @@ Tests are structured to support integration into framework and CI/CD pipelines f
 - Page objects encapsulate web element interactions and page behaviors
 - Tests are modular, readable, and designed for reuse across test cases
 
-# Getting started
+## Getting started
 
-**Prerequisites**
+### Prerequisites
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v14 or higher recommended)
@@ -26,36 +26,34 @@ Ensure you have the following installed:
 - [Selenium](https://www.selenium.dev) 
 - [Cucumber](https://cucumber.io/) 
 
-## Installation 
+### Installation 
 
- *1 Clone the Repository:*
+**1 Clone the Repository:**
 
-git clone https://github.com/AuraBee/techTestCucumber.git
+`git clone https://github.com/AuraBee/techTestCucumber.git
 cd techTestCucumber
+`
 
-**Running Tests:**
-Run the following command:
-npm test 
+## Running Tests: 
+**Run the following command:**
+`npm test `
 
 *This will initiate the test runner, executing the Cucumber scenarios defined for the BBC Sounds pages.*
 
 
-*Project Comments and Notes*
+### Project Comments and Notes 
 
-The framework includes initial support structure for scalable test development.
-
-world.js and hooks.js files are present inside support directory and ready for integration, although not fully wired into the framework yet.
-
-The Music feature file is written and its corresponding Page Object Model (POM) class is in place, ready for automation — however, test steps are not yet automated.
-
-The foundation is laid out for extending this project into a robust, maintainable test suite, including support for CI/CD and further scenario coverage.
+- The framework includes initial support structure for scalable test development.
+- A Maintainable test suite, including support for CI/CD and further scenario coverage.
+- File strcuture for support / world.js and support/hooks.js files are present
+- The Music feature file is written in Gherkin and its corresponding Page Object Model (POM). 
+- This foundation canthis project into a robust, 
 
 
-*Vision and next steps*
- - Complete automation for the Music feature by connecting Gherkin scenarios to step definitions and implementing assertions.
-
-- Integrate world.js and hooks.js to manage test context more effectively.
-
+### Vision and next steps
+- Complete automation for the Music feature by connecting Gherkin scenarios to stepdef.js including implementing assertions.
+- Integrate world.js and hooks.js  into the framework to manage test context more effectively.
 - Expand Cucumber functionality including incorporating tags.
-
 - Continue enhancing the test suite to support more pages, data-driven testing, and full CI/CD integration.
+
+#
