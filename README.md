@@ -30,12 +30,16 @@ Ensure you have the following installed:
 
 **1 Clone the Repository:**
 
-`git clone https://github.com/AuraBee/techTestCucumber.git
-cd techTestCucumber
-`
+`git clone https://github.com/AuraBee/techTestCucumber.git`
+
+**and then**
+
+`cd techTestCucumber`
+
 
 ## Running Tests: 
 **Run the following command:**
+
 `npm test `
 
 *This will initiate the test runner, executing the Cucumber scenarios defined for the BBC Sounds pages.*
@@ -45,7 +49,7 @@ cd techTestCucumber
 
 - The framework includes initial support structure for scalable test development.
 - A Maintainable test suite, including support for CI/CD and further scenario coverage.
-- File strcuture for support / world.js and support/hooks.js files are present
+- File structure for support / world.js and support/hooks.js files are present
 - The Music feature file is written in Gherkin and its corresponding Page Object Model (POM). 
 - This foundation canthis project into a robust, 
 
