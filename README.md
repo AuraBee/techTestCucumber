@@ -35,6 +35,7 @@ Ensure you have the following installed:
 **and then**
 
 `cd techTestCucumber`
+` npm install `
 
 
 ## Running Tests: 
