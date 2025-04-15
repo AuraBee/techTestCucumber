@@ -10,7 +10,7 @@ const PlayPage = require('../../pages/playPage-objects');
 const CategoriesPage = require('../../pages/categoriesPage-objects');
 const Modal = require('../../pages/modal-objects');
 const Cookies = require('../../pages/cookies-objects');
-// const Music = require('../../pages/musicPage-objects');
+const Music = require('../../pages/musicPage-objects');
 
 //Setting variables for the driver and page Objects
 let driver;  //
@@ -20,26 +20,27 @@ let stations;
 let playpage;
 let modal;
 let cookies;
-// let music;
+let music;
 
 const capabilities = Capabilities.chrome(); // Creating and instance of capabilities for Chrome  
 capabilities.set('chromeOptions', { "w3c": false });  // setting capabilities & ensuring driver adhere to W3C standards protocols.
 
 let { setDefaultTimeout } = require('@cucumber/cucumber');
 const CookiesPopUp = require('../../pages/cookies-objects');
+const MusicPage = require('../../pages/musicPage-objects');
 setDefaultTimeout(60 * 1000);  //setting default timeout on cucumber steps
 
 
 Before(async function() {  // adding before to run set up
     driver = new Builder().withCapabilities(capabilities).build();  // creates and instansace of our drover with cap[aaibiltie sand build
     //Instances of the page objct model with driver capabiliities
-   /// could add to before 
     homepage = new HomePage(driver);
     stations = new StationsPage(driver);
     categories = new CategoriesPage(driver);
     playpage = new PlayPage(driver);
     modal = new Modal(driver);
     cookies = new CookiesPopUp(driver);
+    music = new MusicPage(driver);
 
     await driver.manage().setTimeouts({ implicit: 15000 });
     await driver.manage().window().maximize(); 
@@ -111,21 +112,22 @@ Then('I should see a prompt to "Sign In" or "Register"', async function () {
     assert.ok(await modal.getRegisterLink().isEnabled()); // asserts that the Register up button is enabled
 });
 
-///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+///><<<<<<<<<<<<<<<<<<<<<<<
 // 
-// Given('I am on the "BBC Sounds Music Homepage"', async function () {
+Given('I am on the "BBC Sounds Music Homepage"', async function () {
+    await driver.get('https://www.bbc.co.uk/sounds/music');
+    // cookies.clickRejectCookies();
+  });
 
-//     await driver.get('https://www.bbc.co.uk/sounds/music');
-//     cookies.clickRejectCookies();
-//   });
+//>>> SCENARIO ONE <<<<
 
-//   Then('I should see a rail titled "Music"', async function () {
-//     assert(await music.getMusicRail().isDisplayed());
-//     assert(await music.getMusicHeader()).getText(), 'Music';
-//     console.log('y');
-// })
+Then('I should see a rail titled "Music" rail', async function () {
+    assert(await music.getMusicRailHeader().isDisplayed()); // asserts that the Listen Live Rail is dislayed
+    assert.equal(await homepage.getMusicHeader().getText(), "Music"); // asserts that the rail title as Listen Live
+})
+
   
+
 
 
 // //   Then('the rail should display eight music cards', function (string) {

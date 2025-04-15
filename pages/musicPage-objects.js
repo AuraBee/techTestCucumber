@@ -4,16 +4,17 @@ class MusicPage {
     constructor(driver) {
         this.driver = driver;
     }
-    // selectors
 
-    //  driver.findElement(By.css('#listen_live')).isDisplayed();
+    getPlayIconOnHover(){
+        return this.driver.findElement(By.css('section#music_page_curations div a[data-testid="playIconRoundel')); // returns Play Icon from cards
+    }
 
-    getMusicHeader() {
-        return this.driver.findElement(By.css('main#main h1.sw-text-primary'));
+    getMusicRailHeader() {
+        return this.driver.findElement(By.css('main#main h1[data-testid="page-title]')); // returns the header from Music Rail
     }
 
     getMusicRail(){
-        return this.driver.findElement(By.css('section#music_page_curations ul.sw-px-2 li')); // returns Music Rail
+        return this.driver.findElement(By.css('section#music_page_curations')); // returns Music Rail
     }
 
 
@@ -26,7 +27,7 @@ class MusicPage {
     }
  
     getMusicMixesViewAll(){
-        return this.driver.findElement(By.css('section#music_page_music_mixes header a span')); // returns mixes View All link
+        return this.driver.findElement(By.css('section#music_page_music_mixes header a span')); // returns Mixes 'View All link'
     }
 
     getMusicCategoriesRail() {
@@ -36,28 +37,17 @@ class MusicPage {
     getMatchYourMood(){
         return this.driver.findElement(By.css('section#mood_categories header h2')); // returns MatchYourMood header
     }
-    getCardsInCategriesRail() {
-        return this.driver.findElements(By.css('section#categories ul.sw-grid li'));
-    }
-
-    getRadioOneLiveCard() {
-        return this.driver.findElement(By.xpath('//*[@id="listen_live"]/div[2]/div[2]/ul/li[1]/a'));
-    }
-
-
+ 
 
     //ACTIONS
-    goToViewAllStations() {
-        this.getViewAllStations().click();
+    goToMusicMixes() {
+        this.getMusicMixesViewAll().click(); // adds click action 
     }
 
-    goToViewAllCategories() {
-        this.getViewAllCategories().click();
+    getPlayIcon(){
+        this.getMusicMixesViewAll().click(); // adds click action
     }
 
-    goToRadioOne() {
-        this.getRadioOneLiveCard().click();
-    }
 }
 
 module.exports = MusicPage;

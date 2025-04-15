@@ -31,12 +31,13 @@ Ensure you have the following installed:
 **Clone the Repository:**
 
 `git clone https://github.com/AuraBee/techTestCucumber.git`
-
-**and then**
-
 `cd techTestCucumber`
-` npm install `
 
+**Install Dependencies**
+
+` npm install `
+`npm install selenium-webdriver`
+`npm install -D webd`
 
 ## Running Tests: 
 **Run the following command:**
@@ -49,7 +50,7 @@ Ensure you have the following installed:
 ### Project Comments and Notes 
 
 - The framework includes initial support structure for scalable test development.
-- A Maintainable test suite, including support for CI/CD and further scenario coverage.
+- A maintainable test suite, including support for CI/CD and further scenario coverage.
 - File structure for support / world.js and support/hooks.js files are present
 - The Music feature file is written in Gherkin and its corresponding Page Object Model (POM). 
 - This foundation canthis project into a robust, 

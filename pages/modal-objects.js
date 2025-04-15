@@ -26,9 +26,25 @@ class ModalPopUp {
         return this.driver.wait(until.elementLocated(By.css('div#msi-modal-overlay button.sc-c-msi-modal__close')), 10000); /// returns the MaybeLater button - wait time added to allow time for header to display.    
     }
 
+    
+    //>> cookies MOdal Selectors <<
+    getCookiesPopUp() {
+        return this.driver.wait(until.elementLocated(By.css('#bbccookiesbanner')), 30000); // returns Cookie Pop Up - wait time added to allow time for Pop Up to display
+    }
 
-    // >> ACTIONS <<
+    getCookiesAccept() {
+        return this.driver.wait(until.elementLocated(By.css('#bbccookies-accept-button')), 30000); //returns Accept Cookies button- wait time added to allow time for Pop Up to display
+    }
+    getCookiesReject() {
+        return this.driver.findElement(By.id('#bbccookies-reject-button')); //returns Reject Cookies button
+    }
 
+
+    getCookiesChoose() {
+        return this.driver.findElement(By.css('div#bbccookies div.orb-banner-options a.banner-button-link"]')); //returns Let Me Choose Button
+    }
+
+    
     goToSignUp() {
         this.getSignUp().click(); // adds a click action to Sign Up button
     }
@@ -43,7 +59,22 @@ class ModalPopUp {
         this.getMaybeLaterLink().click(); // adds a click action to Maybe Later Button    
     }
 
+
+    //>> ACTIONS <<
+    goToAcceptCookies(){
+        this.getCookiesAccept().click();  //adds click action to  Accept Cookies button
+    }
+
+    goToRejectCookies(){
+        this.getCookiesReject().click(); // adds click action to  Reject Cookies button
+    }
+
+    goToLetMeChoose(){
+        this.getCookiesChoose().click(); // adds click action to Let Me Choose button
+    }
 }
+    // >> ACTIONS <<
+
 module.exports = ModalPopUp; // exports ModalPopUp Page
 
 

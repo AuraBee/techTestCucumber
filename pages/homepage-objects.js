@@ -6,8 +6,6 @@ class HomePage {
     }
     // selectors
 
-    //  driver.findElement(By.css('#listen_live')).isDisplayed();
-
     getListenLiveRail() {
         return this.driver.findElement(By.css('section[data-testid="rail-listen_live"]')); // returns the Listen Live Rail
     }
