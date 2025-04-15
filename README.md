@@ -3,9 +3,13 @@
 ## Project Overview
 
 This repo showcases a technical test project for BBC Sounds website. 
+
 A testing automation framework built with Node.js, Cucumber, Selenium Webdriver.
+
 Test Features and Scenarios are witten in Gherkin syntax to assist readability and collaboration. 
+
 The Page Object Model deisgn pattern promotes code reusability and maintainability
+
 All tests are structured to support integration into framework and CI/CD pipelines for scalable automation.
 
 
@@ -32,6 +36,7 @@ Ensure you have the following installed:
 **Clone the Repository:**
 
 `git clone https://github.com/AuraBee/techTestCucumber.git`
+
 `cd techTestCucumber`
 
 **Install Dependencies**
