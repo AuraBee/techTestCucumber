@@ -1,0 +1,20 @@
+{
+  "name": "techtestcucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "webd": "^0.0.1-predev"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.31.0"
+  }
+}
