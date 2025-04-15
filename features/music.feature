@@ -4,19 +4,21 @@
 # SO THAT I can explore music content such as live performances, podcasts, and music categories in one
 # location.
 
+# @todo
 # Scenario: Validate the "Music" rail and its cards
 # Then I should see a rail titled "Music" rail 
 # And the rail should display eight music cards
 # When I hover over a music card 
 # Then a play icon should should appear
 
+# @todo
 # Scenario: Validate the "Tracklist" navigation and content
 # Then I should see a rail titled "News & Trending"  
 # When I click on a the "Pace Setter" music card
 # Then I am taken to the "Pace Setter" page
 # And a "Tracklist" section is displayed
 
-
+# @todo
 # Scenario: Validate the "Mixes" rail and its links
 # Then I should see a rail titled "Mixes"  
 # And the rail should display five music cards

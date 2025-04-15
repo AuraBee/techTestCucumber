@@ -37,7 +37,9 @@ Ensure you have the following installed:
 **Install Dependencies**
 
 ` npm install `
+
 `npm install selenium-webdriver`
+
 `npm install -D webd`
 
 ## Running Tests: 
@@ -62,5 +64,3 @@ Ensure you have the following installed:
 - Integrate world.js and hooks.js  into the framework to manage test context more effectively.
 - Expand Cucumber functionality including incorporating tags.
 - Continue enhancing the test suite to support more pages, data-driven testing, and full CI/CD integration.
-
-#
