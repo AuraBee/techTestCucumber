@@ -40,6 +40,22 @@ npm test
 *This will initiate the test runner, executing the Cucumber scenarios defined for the BBC Sounds pages.*
 
 
-*Additional Comments*
+*Project Comments and Notes*
 
-The
+The framework includes initial support structure for scalable test development.
+
+world.js and hooks.js files are present inside support directory and ready for integration, although not fully wired into the framework yet.
+
+The Music feature file is written and its corresponding Page Object Model (POM) class is in place, ready for automation — however, test steps are not yet automated.
+
+The foundation is laid out for extending this project into a robust, maintainable test suite, including support for CI/CD and further scenario coverage.
+
+
+*Vision and next steps*
+ - Complete automation for the Music feature by connecting Gherkin scenarios to step definitions and implementing assertions.
+
+- Integrate world.js and hooks.js to manage test context more effectively.
+
+- Expand Cucumber functionality including incorporating tags.
+
+- Continue enhancing the test suite to support more pages, data-driven testing, and full CI/CD integration.
