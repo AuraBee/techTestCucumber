@@ -1,4 +1,4 @@
-# BBC Sounds - Technical Test showcasing Cucumber + Selenium + JavaScript for testing.
+# Project using Cucumber + Selenium + JavaScript for testing.
 
 ## Project Overview
 
