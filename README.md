@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repo showcases a technical test project for BBC Sounds website. 
+This repo showcases a project using BBC Sounds website. 
 
 A testing automation framework built with Node.js, Cucumber, Selenium Webdriver.
 
