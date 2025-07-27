@@ -52,7 +52,7 @@ Ensure you have the following installed:
 
 `npm test `
 
-*This will initiate the test runner, executing the Cucumber scenarios defined for the BBC Sounds pages.*
+*This will initiate the test runner, executing the Cucumber scenarios.*
 
 
 ### Project Comments and Notes 
